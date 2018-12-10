@@ -70,14 +70,6 @@ def get_all_tweets(screen_name):
     	urllib.request.urlretrieve(url,'D:/twitter/%d.jpg'%i)
     	i += 1
 
-
-    
-
-    #write tweet objects to JSON
-    #file = open('tweet.json', 'w') 
-    #print ("Writing tweet objects to JSON please wait...")
-    #for status in alltweets:
-     #   json.dump(status._json,file,sort_keys = True,indent = 4)
 def videooutput(name):
     os.system("ffmpeg -f image2 -r 0.2 -i D:/twitter/%d.jpg "+name+".mp4")
     #close the file
@@ -132,13 +124,6 @@ def label(username):
 
         i += 1
 
-
-
-
-#def write_text(self,(x,y),text,font_filename,font_size=11,color=(0,0,0),max_width=None,max_height=None):
- #   if isinstance(text,str):
-  #      text = text.decode(self.encoding)
-   # if font_size =='fill' and \
 
 if __name__ == '__main__':
     #pass in the username of the account you want to download
