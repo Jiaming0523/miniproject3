@@ -1,12 +1,4 @@
-def query_user(mycursor):
-    screen_name =input("Enter a user name to query: ")
-    mycursor.execute("SELECT * FROM user_data WHERE username='"+screen_name+"'")
-    myresult = mycursor.fetchall()
-    if (len(myresult)==0):
-        print("No such user name")
-    else:
-        for user in myresult:
-            print(user)
+import pymysql
 
 def print_db(mycursor):
     mycursor.execute(("SELECT * FROM user_data"))
